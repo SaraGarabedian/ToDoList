@@ -1,6 +1,6 @@
 public class MainMenu {
     public static String WELCOME_TEXT = ">> Welcome to your To do list\n" +
-            ">> You have 0 tasks to do and 0 tasks are done!\n" +
+            ">> You have %d tasks to do and %d tasks are done!\n" +
             ">> Select an option:\n" +
             ">> (1) Show Task List (by date or project)\n" +
             ">> (2) Add New Task\n" +
@@ -8,7 +8,7 @@ public class MainMenu {
             ">> (4) Save and Quit\n" +
             ">> Enter your selection: ";
 
-    public static String LIST_ITEMS = "ID |     Title     | Due Date    | Project    | Status  ";
+    public static String LIST_ITEMS = String.format("%5s| %14s| %13s| %14s| %8s|", "ID", "Title", "Due Date", "Project", "Status");
     public static String TITLE_REQUEST = "Add a title to your new task and press Enter:\n" +
             ">> ";
     public static String DUE_DATE_REQUEST = "Add a due date for your task and press Enter:\n" +
