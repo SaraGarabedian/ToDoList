@@ -13,8 +13,5 @@ public class Task {
     @Override
     public String toString() {
         return String.format("%14s| %13s| %14s| %8s|", title, date, project, status);
-//        title + ", " + date +
-//                ", " + project +
-//                ", " + status ;
     }
 }
