@@ -16,6 +16,8 @@ public class Main {
         listItems.add(task3);
         listItems.add(task4);
 
+        System.out.println(MainMenu.mainMenuText);
+
         System.out.println("Here is your To do list: ");
 
         TaskUtil.printList(listItems);
