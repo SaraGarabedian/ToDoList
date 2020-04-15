@@ -21,16 +21,6 @@ public class Main {
         System.out.println("Here is your To do list: ");
 
         TaskUtil.printList(listItems);
-//        for (int i = 0; i < listItems.size(); i++) {
-//            //int j = listItems.indexOf(i)+1;
-//            System.out.println(i+1 + " " + listItems.get(i));
-//        }
-//
-//        System.out.println();
 
-//        for (Task task : listItems) {
-//            int i = listItems.indexOf(task);
-//            System.out.println(i+1 + " " + task);
-//        }
     }
 }
