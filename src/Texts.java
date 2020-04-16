@@ -16,9 +16,9 @@ public class Texts {
 
     public static String TITLE_REQUEST = "Add a title to your new task and press Enter:\n" +
             ">> ";
-    public static String DUE_DATE_REQUEST = "Add a due date for your task and press Enter:\n" +
+    public static String DUE_DATE_REQUEST = "Add a due date to your new task and press Enter:\n" +
             ">> ";
-    public static String PROJECT_REQUEST = "Add a your new task to a project and press Enter:\n" +
+    public static String PROJECT_REQUEST = "Add a project to your new task and press Enter:\n" +
             ">> ";
 
     public static String UPDATE_MENU = ">> (u) Modify task (d) Mark as Done (r) Remove task (m) Main menu";
