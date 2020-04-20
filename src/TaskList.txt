@@ -1,0 +1,4 @@
+    Buy Apples|    2020-05-10|      Groceries|    To do|
+      Buy milk|    2020-04-10|      Groceries|    To do|
+      Call mom|    2020-04-02|          Tasks|    To do|
+  Record movie|    2020-04-02|  Entertainment|    To do|
