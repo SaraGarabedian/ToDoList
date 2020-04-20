@@ -1,9 +1,10 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class MainMenu {
-    public static void welcomeMenuActions(List<Task> listItems) {
+    public static void welcomeMenuActions(List<Task> listItems) throws IOException {
         System.out.println(Texts.WELCOME_TEXT);
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -13,6 +14,7 @@ public class MainMenu {
                 System.out.println("Here is your To do list: \n" + Texts.LIST_ITEMS);
                 TaskUtil.printList(listItems);
                 selectSortingOption(listItems);
+                break;
             case 2:
                 Scanner scanAddTask = new Scanner(System.in);
                 System.out.println(Texts.TITLE_REQUEST);
@@ -24,14 +26,19 @@ public class MainMenu {
                 listItems.add(new Task(title, dueDate, project));
                 TaskUtil.printList(listItems);
                 welcomeMenuActions(listItems);
+                break;
             case 3:
                 System.out.println("Here is your To do list: \n" + Texts.LIST_ITEMS);
                 TaskUtil.printList(listItems);
                 selectUpdateOption(listItems);
+                break;
+            case 4:
+                FileUtil.writeToFile(listItems);
+                break;
         }
     }
 
-    private static void selectUpdateOption(List<Task> listItems) {
+    private static void selectUpdateOption(List<Task> listItems) throws IOException {
         System.out.println(Texts.UPDATE_MENU);
         Scanner scannerUpdateSelection = new Scanner(System.in);
         String selection = scannerUpdateSelection.nextLine();
@@ -45,13 +52,15 @@ public class MainMenu {
                 System.out.println(Texts.MODIFY_SELECT_TASK_REQUEST);
                 Scanner scanSelectTaskDone = new Scanner(System.in);
                 int taskNumberDone = scanSelectTaskDone.nextInt();
-                Task selectedTaskToDelete = listItems.get(taskNumberDone-1);
+                Task selectedTaskToMarkDone = listItems.get(taskNumberDone-1);
             case "r":
                 System.out.println(Texts.MODIFY_SELECT_TASK_REQUEST);
                 Scanner scanSelectTaskRemove = new Scanner(System.in);
                 int taskNumberRemove = scanSelectTaskRemove.nextInt();
                 Task selectedTaskToRemove = listItems.get(taskNumberRemove-1);
-                //Main.main(listItems.remove(selectedTaskToDelete));
+                listItems.remove(selectedTaskToRemove);
+                welcomeMenuActions(listItems);
+                break;
             case "m":
                 welcomeMenuActions(listItems);
                 break;
@@ -62,7 +71,7 @@ public class MainMenu {
         }
     }
 
-    private static void selectSortingOption(List<Task> listItems) {
+    private static void selectSortingOption(List<Task> listItems) throws IOException {
         System.out.println(Texts.SORT_MENU);
         Scanner scannerSortSelection = new Scanner(System.in);
         String selection = scannerSortSelection.nextLine();

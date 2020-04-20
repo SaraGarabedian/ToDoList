@@ -1,9 +1,11 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
+
         List<Task> listItems = new ArrayList<>();
 
         Task task1 = new Task("Buy Apples", "2020-05-10", "Groceries");
@@ -16,7 +18,11 @@ public class Main {
         listItems.add(task3);
         listItems.add(task4);
 
-        MainMenu.welcomeMenuActions(listItems);
+        try {
+            MainMenu.welcomeMenuActions(listItems);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
