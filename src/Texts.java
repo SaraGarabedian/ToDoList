@@ -9,11 +9,16 @@ public class Texts {
             ">> Enter your selection: ";
 
     public static String LIST_ITEMS = String.format("%5s| %14s| %13s| %14s| %8s|", "ID", "Title", "Due Date", "Project", "Status");
+
+    public static String SORT_MENU = ">> (d) Show by Date (p) Show by Project (i) Show by ID (m) Main menu\n" +
+            ">> ";
+
+
     public static String TITLE_REQUEST = "Add a title to your new task and press Enter:\n" +
             ">> ";
-    public static String DUE_DATE_REQUEST = "Add a due date for your task and press Enter:\n" +
+    public static String DUE_DATE_REQUEST = "Add a due date to your new task and press Enter:\n" +
             ">> ";
-    public static String PROJECT_REQUEST = "Add a your new task to a project and press Enter:\n" +
+    public static String PROJECT_REQUEST = "Add a project to your new task and press Enter:\n" +
             ">> ";
 
     public static String UPDATE_MENU = ">> (u) Modify task (d) Mark as Done (r) Remove task (m) Main menu";
