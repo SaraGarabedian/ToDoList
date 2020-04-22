@@ -34,6 +34,7 @@ public class MainMenu {
                 break;
             case 4:
                 FileUtil.writeToFile(listItems);
+                System.out.println("List saved, see you soon!");
                 break;
         }
     }
