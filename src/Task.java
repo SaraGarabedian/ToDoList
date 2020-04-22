@@ -4,10 +4,17 @@ public class Task {
     private String project;
     private String status = "To do";
 
-    public Task(String title, String date, String project){
+    public Task(String title, String date, String project) {
         this.title = title;
         this.date = date;
         this.project = project;
+    }
+
+    public Task(String title, String date, String project, String status) {
+        this.title = title;
+        this.date = date;
+        this.project = project;
+        this.status = status;
     }
 
     @Override
